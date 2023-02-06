@@ -1,0 +1,705 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+textarea {
+  resize: vertical;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-for-desktop {
+  display: none;
+}
+
+.nav-for-mobile {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  z-index: 1000;
+}
+
+.forest-icons {
+  background-color: white;
+  padding: 20px;
+}
+
+.fa-tree,
+.forest {
+  font-size: 30px;
+  margin: 2px;
+}
+
+.nav-items {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-101%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+  background-color: red;
+}
+.nav-items a {
+  margin: 2em;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.active {
+  transform: translateX(0);
+}
+
+.sticky-body {
+  overflow: hidden;
+}
+
+.forest-icons {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+}
+
+.burger-btn {
+  position: fixed;
+  padding: 20px;
+  z-index: 300;
+  margin-left: 0;
+  background: none;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+header .header-img {
+  position: relative;
+  height: 300px;
+  background-image: url("/dist/img/jungle-mobile.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+header .header-img .header-text {
+  position: absolute;
+  margin-left: 15%;
+  margin-top: 90px;
+  color: #fff;
+  z-index: 5;
+}
+header .header-img .header-text h1 {
+  font-size: 2rem;
+  font-weight: normal;
+}
+header .header-img .header-text p {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+header .header-img .header-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(7, 8, 7, 0.6);
+}
+
+section.about-us {
+  margin: 0 10% 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.about-us .about-us-header {
+  font-size: 40px;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 20px;
+}
+section.about-us .photo-and-text .about-us-photo .about-us-img-mobile {
+  height: auto;
+  width: 100%;
+  height: 100%;
+}
+section.about-us .photo-and-text .adventures {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+section.about-us .photo-and-text .adventures h3 {
+  font-size: 2rem;
+}
+section.about-us .photo-and-text .about-us-text,
+section.about-us .photo-and-text .about-us-img {
+  padding: 10px 20px;
+}
+section.about-us .photo-and-text .about-us-text {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.about-us-img-desktop {
+  display: none;
+}
+
+section.trip .header-img-trip {
+  position: relative;
+  height: 175px;
+  background-image: url("/dist/img/girl-mobile.jpg");
+  background-size: cover;
+  background-position: 0 50%;
+}
+section.trip .header-img-trip .header-text-trip {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+  color: #fff;
+  z-index: 5;
+  width: 300px;
+}
+section.trip .header-img-trip .header-text-trip .square {
+  padding: 10px;
+  border: 1px solid rgb(255, 255, 255);
+}
+section.trip .header-img-trip .header-text-trip .square .p-trip {
+  font-size: 20px;
+}
+section.trip .header-img-trip .header-bg-trip {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(7, 8, 7, 0.55);
+}
+
+section.cards-section-for-desktop {
+  display: none;
+}
+
+section.cards-section {
+  margin-top: 50px;
+}
+section.cards-section .text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+section.cards-section .text-container h3 {
+  font-size: 3rem;
+}
+section.cards-section .text-container p {
+  font-size: 1.7rem;
+  text-align: center;
+}
+section.cards-section .card-box {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+section.cards-section .card-box .card {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  box-shadow: 2px 2px 5px rgb(194, 192, 190);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+section.cards-section .card-box .card .card-body {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  height: 100%;
+  padding: 1em;
+}
+section.cards-section .card-box .card .card-body .type-and-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.cards-section .card-box .card .card-body .type-and-price .card-price {
+  font-weight: bold;
+}
+section.cards-section .card-box .card .card-body .type-and-price .card-type,
+section.cards-section .card-box .card .card-body .type-and-price .card-price {
+  margin: 10px 10px;
+  font-size: 3rem;
+}
+section.cards-section .card-box .card .card-body .type-and-price .dolar {
+  bottom: 3px;
+  margin: 1px;
+}
+section.cards-section .card-box .card .card-body .type-and-price .last-numbers {
+  position: relative;
+  bottom: -3px;
+}
+section.cards-section .card-box .card .card-body .card-desription {
+  margin-bottom: 5px;
+  font-size: 2rem;
+}
+section.cards-section .card-box .card .card-body .not-in-package {
+  color: rgb(103, 103, 103);
+}
+section.cards-section .card-box .card .card-body .fa-check {
+  color: lime;
+}
+section.cards-section .card-box .card .card-body .submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+section.cards-section .card-box .card .card-body .submit .submit-btn {
+  color: black;
+  background: rgb(123, 235, 123);
+  font-size: 2.2rem;
+  padding: 3px 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(190, 194, 190);
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+section.cards-section .card-box .card .card-body .submit .submit-btn:hover {
+  background-color: rgb(23, 235, 23);
+}
+section.cards-section .card-box .card .card-body .submit-no-color {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+section.cards-section .card-box .card .card-body .submit-no-color .submit-btn-no-color {
+  color: black;
+  background-color: rgb(253, 252, 252);
+  font-size: 2.2rem;
+  padding: 3px 30px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(190, 194, 190);
+  margin: 10px;
+  transition: background-color 0.3s;
+}
+section.cards-section .card-box .card .card-body .submit-no-color .submit-btn-no-color:hover {
+  background-color: rgb(23, 235, 23);
+}
+section.cards-section .more-offers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.cards-section .more-offers .more-offers {
+  font-size: 1.5rem;
+}
+section.cards-section .more-offers .more-offers .other-products {
+  margin-top: 5px;
+  color: white;
+  background-color: royalblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: rgba(246, 244, 244, 0.772);
+}
+footer .upper-footer {
+  margin: 30px;
+}
+footer .upper-footer .icon-and-forest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  font-size: 3rem;
+}
+footer .upper-footer .tortilla-wrapper-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .upper-footer .tortilla-wrapper-footer .about-us-footer,
+footer .upper-footer .tortilla-wrapper-footer .our-compan-footer,
+footer .upper-footer .tortilla-wrapper-footer .documents-footer {
+  display: flex;
+  flex-direction: column;
+}
+footer .upper-footer .tortilla-wrapper-footer .footer-header {
+  color: black;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+footer .upper-footer .tortilla-wrapper-footer .footer-description {
+  color: rgb(124, 124, 124);
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+footer hr {
+  color: gray;
+}
+footer .lower-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 20px;
+}
+footer .lower-footer .forest-group-company {
+  color: rgb(105, 104, 104);
+}
+
+@media (min-width: 768px) {
+  header .header-img .header-text h1 {
+    font-size: 3rem;
+  }
+  header .header-img .header-text p {
+    font-size: 3.5rem;
+  }
+  section.trip .header-img-trip {
+    height: 250px;
+  }
+  section.trip .header-img-trip .header-text-trip .square {
+    padding: 20px;
+    border: 1px solid rgb(255, 255, 255);
+    white-space: nowrap;
+  }
+  section.trip .header-img-trip .header-text-trip .square .p-trip {
+    font-size: 3rem;
+  }
+  section.cards-section-for-desktop {
+    display: none;
+  }
+  section.cards-section .card-box .card {
+    width: 85%;
+  }
+  section.cards-section .card-box .card .card-body .type-and-price .card-type,
+section.cards-section .card-box .card .card-body .type-and-price .card-price {
+    font-size: 4.5rem;
+  }
+  section.cards-section .card-box .card .card-body .card-desription {
+    margin-bottom: 5px;
+    font-size: 2.5rem;
+  }
+  section.cards-section .card-box .card .card-body .submit .submit-btn {
+    font-size: 3rem;
+    padding: 10px 50px;
+  }
+  section.cards-section .card-box:first-child {
+    margin-top: 80px;
+  }
+  section.cards-section .card-box:last-child {
+    margin-bottom: 80px;
+  }
+}
+@media (min-width: 992px) {
+  header .header-img {
+    background-image: url("/dist/img/jungle-desktop.jpg");
+  }
+  .nav-for-mobile {
+    display: none;
+  }
+  .nav-for-desktop {
+    display: flex;
+    background-color: #fff;
+    z-index: 50000;
+  }
+  .nav-for-desktop nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+  }
+  .nav-for-desktop nav .desktop-logo-icons {
+    margin-left: 15%;
+  }
+  .nav-for-desktop nav .desktop-home-icons {
+    margin-right: 15%;
+  }
+  .nav-for-desktop nav .item-fz,
+.nav-for-desktop nav .desktop-logo-icons {
+    font-size: 2rem;
+  }
+  .nav-for-desktop nav .fa-tree,
+.nav-for-desktop nav .forest {
+    font-size: 4rem;
+  }
+  .nav-for-desktop nav .desktop-home-icons {
+    display: flex;
+    flex-direction: row;
+  }
+  .nav-for-desktop nav .desktop-home-icons .nav-desktop-home,
+.nav-for-desktop nav .desktop-home-icons .nav-desktop-about-us,
+.nav-for-desktop nav .desktop-home-icons .nav-desktop-offer,
+.nav-for-desktop nav .desktop-home-icons .nav-desktop-contact {
+    padding: 30px;
+    color: black;
+  }
+  .nav-for-desktop nav .desktop-home-icons .nav-desktop-home {
+    padding: 30px;
+    color: white;
+    background-color: #333;
+  }
+  .about-us-img-desktop {
+    display: block;
+  }
+  .about-us-img-mobile {
+    display: none;
+  }
+  section.about-us {
+    margin: 80px 15%;
+  }
+  section.about-us .about-us-header {
+    font-size: 6rem;
+  }
+  section.about-us .photo-and-text {
+    display: flex;
+    flex-direction: row;
+  }
+  section.about-us .photo-and-text .about-us-photo .about-us-img-desktop {
+    width: 100%;
+  }
+  section.about-us .photo-and-text .adventures-and-text .adventures h3 {
+    font-size: 3rem;
+  }
+  section.about-us .photo-and-text .adventures-and-text .about-us-text {
+    font-size: 2.5rem;
+  }
+  section.trip .header-img-trip {
+    background-image: url("/dist/img/girl-desktop.jpg");
+    height: 400px;
+  }
+  section.trip .header-img-trip .header-text-trip .square .p-trip {
+    margin: 40px 500px;
+    font-size: 5rem;
+  }
+  section.cards-section {
+    display: none;
+  }
+  section.cards-section-for-desktop {
+    margin: 100px 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  section.cards-section-for-desktop .text-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section.cards-section-for-desktop .text-container h3 {
+    font-size: 3rem;
+  }
+  section.cards-section-for-desktop .text-container p {
+    font-size: 2rem;
+  }
+  section.cards-section-for-desktop .card-box {
+    width: 250px;
+    height: 400px;
+    display: flex;
+    margin: 0 50px;
+  }
+  section.cards-section-for-desktop .card-box .card {
+    display: flex;
+    justify-content: center;
+    box-shadow: 2px 2px 14px 5px rgb(194, 192, 190);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body {
+    font-size: 15px;
+    height: 100%;
+    padding: 1em;
+    width: 300px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .type-and-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 15px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .type-and-price .card-price {
+    font-weight: bold;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .type-and-price .card-type,
+section.cards-section-for-desktop .card-box .card .card-body .type-and-price .card-price {
+    margin: 10px 10px;
+    font-size: 3rem;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .type-and-price .dolar {
+    bottom: 3px;
+    margin: 1px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .type-and-price .last-numbers {
+    bottom: -3px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .options {
+    display: flex;
+    justify-content: center;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .options .card-desription {
+    margin-bottom: 5px;
+    font-size: 2rem;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .options .not-in-package {
+    color: rgb(103, 103, 103);
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .options .fa-check {
+    color: lime;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit .submit-btn {
+    color: black;
+    background: rgb(123, 235, 123);
+    font-size: 2.2rem;
+    padding: 3px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(190, 194, 190);
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit .submit-btn:hover {
+    background-color: rgb(23, 235, 23);
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit-no-color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit-no-color .submit-btn-no-color {
+    color: black;
+    background-color: rgb(253, 252, 252);
+    font-size: 2.2rem;
+    padding: 3px 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgb(190, 194, 190);
+    margin: 10px;
+    transition: background-color 0.3s;
+  }
+  section.cards-section-for-desktop .card-box .card .card-body .submit-no-color .submit-btn-no-color:hover {
+    background-color: rgb(23, 235, 23);
+  }
+  .more-offers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .more-offers .more-offers {
+    font-size: 3rem;
+  }
+  .more-offers .more-offers .other-products {
+    margin-left: 5px;
+    color: white;
+    background-color: royalblue;
+    transition: 0.3s;
+  }
+  .more-offers .more-offers .other-products:hover {
+    background-color: white;
+    color: royalblue;
+  }
+  .four {
+    z-index: 0;
+  }
+  .four::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    height: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: -1;
+  }
+  .four::hover {
+    color: #000000;
+  }
+  .four:hover::after {
+    height: 100%;
+  }
+  footer .upper-footer {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 20%;
+  }
+  footer .upper-footer .icon-and-forest .fa-tree,
+footer .upper-footer .icon-and-forest .forest {
+    font-size: 3rem;
+  }
+  footer .upper-footer .tortilla-wrapper-footer .about-us-footer .footer-header,
+footer .upper-footer .tortilla-wrapper-footer .our-compan-footer .footer-header,
+footer .upper-footer .tortilla-wrapper-footer .documents-footer .footer-header {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  footer .upper-footer .tortilla-wrapper-footer .about-us-footer .footer-description,
+footer .upper-footer .tortilla-wrapper-footer .our-compan-footer .footer-description,
+footer .upper-footer .tortilla-wrapper-footer .documents-footer .footer-description {
+    font-size: 2rem;
+  }
+  footer .upper-footer .tortilla-wrapper-footer .about-us-footer,
+footer .upper-footer .tortilla-wrapper-footer .our-compan-footer,
+footer .upper-footer .tortilla-wrapper-footer .documents-footer {
+    margin: 0 50px;
+  }
+}/*# sourceMappingURL=style.css.map */

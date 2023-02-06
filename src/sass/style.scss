@@ -1,0 +1,1141 @@
+@use 'utilities/reset';
+
+section {
+	scroll-margin-top: 75px;
+}
+
+body {
+	font-family: 'Raleway', sans-serif;
+}
+
+// *** //
+// NAV //
+// *** //
+
+.nav-for-desktop {
+	display: none;
+}
+
+.nav-for-mobile {
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	background-color: white;
+	z-index: 1000;
+}
+
+.forest-icons {
+	background-color: white;
+	padding: 20px;
+}
+
+.fa-tree,
+.forest {
+	color: black;
+	font-size: 30px;
+	margin: 2px;
+}
+
+.nav-items {
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-101%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	transition: transform 0.3s;
+	background-color: rgb(79, 161, 104);
+
+	a {
+		margin: 2em;
+		text-decoration: none;
+		font-size: 2rem;
+		color: #fff;
+		font-weight: bold;
+	}
+}
+
+.active {
+	transform: translateX(0);
+}
+
+.sticky-body {
+	overflow: hidden;
+}
+
+.forest-icons {
+	background-color: white;
+	padding: 20px;
+	margin: auto;
+}
+
+.burger-btn {
+	position: fixed;
+	padding: 20px;
+	z-index: 300;
+	margin-left: 0;
+	background: none;
+	border: none;
+	font-size: 3rem;
+	cursor: pointer;
+}
+
+// *******//
+// HEADER //
+// *******//
+
+header {
+	.header-img {
+		position: relative;
+		height: 500px;
+		background-image: url('../../dist/img/jungle-mobile.jpg');
+		background-size: cover;
+		background-position: 0 50%;
+
+		.header-text {
+			position: absolute;
+			// TO PSUŁO I ROBIŁO PASEK DO PRZEWIJANIA
+			// margin-left: 15%;
+			// margin-top: 100px;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%);
+			color: #fff;
+			z-index: 5;
+
+			.forest-header {
+				font-size: 2rem;
+				font-weight: normal;
+			}
+
+			p {
+				font-size: 2.5rem;
+				font-weight: bold;
+			}
+		}
+
+		.header-bg {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(7, 8, 7, 0.6);
+		}
+	}
+}
+
+// ******** //
+// about US //
+// ******** //
+
+section.about-us {
+	.about-us-header {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		h2 {
+			font-size: 3.5rem;
+			margin: 30px 0;
+		}
+	}
+
+	.about-us-body {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 10%;
+
+		.about-us-img-mobile {
+			width: 100%;
+		}
+
+		h3 {
+			font-size: 2.5rem;
+			margin: 30px 0;
+		}
+
+		p {
+			font-size: 1.5rem;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+section.about-us-desktop {
+	display: none;
+}
+
+section.about-us {
+	margin: 0 10% 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	// padding: 30px 0;
+
+	.about-us-header {
+		font-size: 40px;
+		font-weight: normal;
+		text-transform: uppercase;
+		margin: 20px;
+		// padding: 15px 0;
+	}
+
+	.photo-and-text {
+		.about-us-photo {
+			.about-us-img-mobile {
+				height: auto;
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.adventures {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 20px 0;
+
+			h3 {
+				font-size: 2rem;
+			}
+		}
+
+		.about-us-text,
+		.about-us-img {
+			padding: 10px 20px;
+		}
+
+		.about-us-text {
+			font-size: 20px;
+			line-height: 30px;
+		}
+	}
+}
+
+// **** //
+// TRIP //
+// **** //
+
+section.trip {
+	.header-img-trip {
+		position: relative;
+		height: 175px;
+		background-image: url('../../dist/img/girl-mobile.jpg');
+		background-size: cover;
+		background-position: 0 50%;
+
+		.header-text-trip {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-weight: bold;
+			color: #fff;
+			z-index: 5;
+			width: 300px;
+
+			.square {
+				padding: 10px;
+				border: 1px solid rgb(255, 255, 255);
+
+				.p-trip {
+					font-size: 20px;
+				}
+			}
+		}
+
+		.header-bg-trip {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			background-color: rgba(7, 8, 7, 0.55);
+		}
+	}
+}
+
+// **** //
+// CARDS //
+// **** //
+
+.offer {
+	.text-container {
+		margin-top: 50px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		h3 {
+			font-size: 2rem;
+		}
+
+		p {
+			font-size: 1.5rem;
+		}
+	}
+}
+
+section.cards-section-for-desktop {
+	display: none;
+}
+
+.before-cards-header {
+	margin: 50px;
+
+	.cards-header {
+		text-align: center;
+		font-size: 3rem;
+	}
+}
+
+section.cards-section {
+	// margin-top: 50px;
+
+	.card-box {
+		margin-top: 30px;
+		display: flex;
+		justify-content: space-evenly;
+
+		.card {
+			margin: 20px;
+			display: flex;
+			flex-direction: column;
+			width: 75%;
+			box-shadow: 2px 2px 5px rgb(194, 192, 190);
+			border-radius: 8px;
+			overflow: hidden;
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+
+			.card-body {
+				display: flex;
+				flex-direction: column;
+				font-size: 15px;
+				height: 100%;
+				padding: 1em;
+
+				.type-and-price {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					flex-direction: column;
+
+					.card-price {
+						font-weight: bold;
+					}
+
+					.card-type,
+					.card-price {
+						margin: 10px 10px;
+						font-size: 3rem;
+					}
+
+					.dolar {
+						bottom: 3px;
+						margin: 1px;
+					}
+
+					.last-numbers {
+						position: relative;
+						bottom: -3px;
+					}
+				}
+
+				.card-desription {
+					margin-bottom: 5px;
+					font-size: 2rem;
+				}
+
+				.not-in-package {
+					color: rgb(103, 103, 103);
+				}
+
+				.fa-check {
+					color: lime;
+				}
+
+				.submit {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 10px;
+
+					.submit-btn {
+						color: black;
+						background: rgb(123, 235, 123);
+						font-size: 2.2rem;
+						padding: 3px 30px;
+						border-radius: 5px;
+						box-shadow: 2px 2px 5px rgb(190, 194, 190);
+						margin: 10px;
+						transition: background-color 0.3s;
+					}
+
+					.submit-btn:hover {
+						background-color: rgb(5, 190, 5);
+					}
+				}
+
+				.submit-no-color {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					margin: 10px;
+
+					.submit-btn-no-color {
+						color: black;
+						background-color: rgb(253, 252, 252);
+						font-size: 2.2rem;
+						padding: 3px 30px;
+						border-radius: 5px;
+						box-shadow: 2px 2px 5px rgb(190, 194, 190);
+						margin: 10px;
+						transition: background-color 0.3s;
+					}
+
+					.submit-btn-no-color:hover {
+						background-color: rgb(233, 230, 230);
+					}
+				}
+			}
+		}
+	}
+}
+
+section.more-offers {
+	.more-offers {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		.more-offers {
+			font-size: 1.5rem;
+			.other-products {
+				margin-top: 5px;
+				color: white;
+				background-color: royalblue;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+		}
+	}
+}
+
+// ****** //
+// FOOTER //
+// ****** //
+
+footer {
+	background-color: rgba(246, 244, 244, 0.772);
+
+	.upper-footer {
+		margin: 30px;
+
+		.icon-and-forest {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 85px;
+			font-size: 3rem;
+		}
+
+		.tortilla-wrapper-footer {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+
+			.about-us-footer,
+			.our-compan-footer,
+			.documents-footer {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.footer-header {
+				color: black;
+				font-size: 2rem;
+				margin-bottom: 5px;
+			}
+
+			.footer-description {
+				color: rgb(124, 124, 124);
+				font-size: 15px;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	hr {
+		color: gray;
+	}
+
+	.lower-footer {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		padding: 20px;
+
+		.forest-group-company {
+			color: rgb(105, 104, 104);
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		.header-img {
+			.header-text {
+				.forest-header {
+					font-size: 3rem;
+				}
+
+				p {
+					font-size: 3.5rem;
+				}
+			}
+		}
+	}
+
+	section.about-us {
+		.about-us-header {
+			h2 {
+				font-size: 4.5rem;
+			}
+		}
+
+		.about-us-body {
+			h3 {
+				font-size: 3.5rem;
+			}
+
+			p {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	section.trip {
+		.header-img-trip {
+			height: 250px;
+			.header-text-trip {
+				.square {
+					padding: 20px;
+					border: 1px solid rgb(255, 255, 255);
+					white-space: nowrap;
+
+					.p-trip {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+
+	section.cards-section-for-desktop {
+		display: none;
+	}
+
+	.offer {
+		.text-container {
+			h3 {
+				font-size: 4rem;
+			}
+
+			p {
+				font-size: 2.5rem;
+			}
+		}
+	}
+
+	section.cards-section {
+		.card-box {
+			.card {
+				width: 85%;
+				.card-body {
+					.type-and-price {
+						.card-type,
+						.card-price {
+							font-size: 4.5rem;
+						}
+					}
+					.card-desription {
+						margin-bottom: 5px;
+						font-size: 2.5rem;
+					}
+
+					.submit {
+						.submit-btn {
+							font-size: 3rem;
+							padding: 10px 50px;
+						}
+					}
+				}
+			}
+		}
+
+		.card-box:first-child {
+			margin-top: 80px;
+		}
+		.card-box:last-child {
+			margin-bottom: 80px;
+		}
+	}
+
+	// CONTACT \/ \/
+	// CONTACT \/ \/
+	// CONTACT \/ \/
+	// CONTACT \/ \/
+	// CONTACT \/ \/
+
+	section.contact-form {
+		.contact-wrapper {
+			min-width: 500px;
+		}
+	}
+	section.google-maps {
+		display: flex;
+		flex-direction: column;
+
+		.find-us {
+			font-size: 2rem;
+			margin-bottom: 30px;
+		}
+
+		.map {
+			width: 700px;
+			height: 550px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	section {
+		scroll-margin-top: 83.2px;
+	}
+
+	.nav-for-mobile {
+		display: none;
+	}
+
+	section.about-us {
+		display: none;
+	}
+
+	.nav-for-desktop {
+		width: 100%;
+		position: fixed;
+		top: 0;
+
+		display: flex;
+		background-color: #fff;
+		z-index: 50000;
+
+		nav {
+			//   width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+
+			.item-fz,
+			.desktop-logo-icons {
+				font-size: 2rem;
+			}
+
+			.fa-tree,
+			.forest {
+				font-size: 4rem;
+			}
+
+			.desktop-home-icons {
+				display: flex;
+				flex-direction: row;
+
+				.nav-desktop-home,
+				.nav-desktop-about-us,
+				.nav-desktop-offer,
+				.nav-desktop-contact {
+					padding: 30px;
+					color: black;
+				}
+
+				.nav-desktop-home {
+					padding: 30px;
+					color: white;
+					background-color: #333;
+				}
+			}
+		}
+	}
+
+	header {
+		.header-img {
+			background-image: url('../../dist/img/jungle-desktop.jpg');
+		}
+	}
+
+	section.about-us-desktop {
+		// ten wrapper działa idealnie
+		display: block;
+		width: 100%;
+		max-width: 1200px;
+		margin: 50px auto;
+
+		.about-us-header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			h3 {
+				font-size: 4rem;
+				margin-bottom: 50px;
+			}
+		}
+
+		.about-us-body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+
+			.about-us-img-desktop {
+				display: flex;
+				width: 50%;
+			}
+
+			.text-about-us {
+				margin-left: 5%;
+				display: flex;
+				flex-direction: column;
+				line-height: 40px;
+
+				h3 {
+					font-size: 3rem;
+				}
+
+				p {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+
+	section.trip {
+		.header-img-trip {
+			background-image: url('../../dist/img/girl-desktop.jpg');
+			height: 400px;
+
+			.header-text-trip {
+				.square {
+					.p-trip {
+						// margin: 40px 500px;
+						// padding: 40px 500px;
+						font-size: 5rem;
+					}
+				}
+			}
+		}
+	}
+
+	section.cards-section {
+		display: none;
+	}
+
+	.offer {
+		.text-container {
+			margin-top: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+
+			h3 {
+				font-size: 3rem;
+			}
+
+			p {
+				font-size: 2rem;
+			}
+		}
+	}
+
+	section.cards-section-for-desktop {
+		margin: 100px 15%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.card-box {
+			width: 250px;
+			height: 400px;
+			display: flex;
+			margin: 0 50px;
+
+			.card {
+				display: flex;
+				justify-content: center;
+				box-shadow: 2px 2px 14px 5px rgb(194, 192, 190);
+				border-radius: 8px;
+				overflow: hidden;
+
+				.card-body {
+					font-size: 15px;
+					height: 100%;
+					padding: 1em;
+					width: 300px;
+
+					.type-and-price {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						margin: 15px;
+
+						.card-price {
+							font-weight: bold;
+						}
+
+						.card-type,
+						.card-price {
+							margin: 10px 10px;
+							font-size: 3rem;
+						}
+
+						.dolar {
+							bottom: 3px;
+							margin: 1px;
+						}
+
+						.last-numbers {
+							bottom: -3px;
+						}
+					}
+
+					.options {
+						display: flex;
+						justify-content: center;
+
+						.card-desription {
+							margin-bottom: 5px;
+							font-size: 2rem;
+						}
+
+						.not-in-package {
+							color: rgb(103, 103, 103);
+						}
+
+						.fa-check {
+							color: lime;
+						}
+					}
+
+					.submit {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin: 10px;
+
+						.submit-btn {
+							color: black;
+							background: rgb(123, 235, 123);
+							font-size: 2.2rem;
+							padding: 3px 30px;
+							border-radius: 5px;
+							box-shadow: 2px 2px 5px rgb(190, 194, 190);
+							margin: 10px;
+							transition: background-color 0.3s;
+						}
+
+						.submit-btn:hover {
+							background-color: limegreen;
+						}
+					}
+
+					.submit-no-color {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						margin: 10px;
+
+						.submit-btn-no-color {
+							color: black;
+							background-color: rgb(253, 252, 252);
+							font-size: 2.2rem;
+							padding: 3px 30px;
+							border-radius: 5px;
+							box-shadow: 2px 2px 5px rgb(190, 194, 190);
+							margin: 10px;
+							transition: background-color 0.3s;
+						}
+
+						.submit-btn-no-color:hover {
+							background-color: rgb(211, 207, 208);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section.more-offers {
+		margin-top: 50px;
+
+		.more-offers {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin-bottom: 50px;
+
+			.more-offers {
+				font-size: 3rem;
+				.other-products {
+					margin-left: 5px;
+					color: white;
+					background-color: royalblue;
+					transition: 0.3s;
+				}
+
+				.other-products:hover {
+					border: 1px solid royalblue;
+					background-color: white;
+					color: royalblue;
+				}
+			}
+		}
+	}
+
+	.four {
+		z-index: 0;
+	}
+	.four::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		top: 0;
+		height: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: -1;
+	}
+
+	.four::hover {
+		color: #000000;
+	}
+
+	.four:hover::after {
+		height: 100%;
+	}
+		footer {
+			width: 100%;
+			max-width: 2000px;
+			margin: 0 auto;
+
+			.upper-footer {
+				height: 300px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				justify-content: space-between;
+				margin: 0 20%;
+
+				.icon-and-forest {
+					.fa-tree,
+					.forest {
+						font-size: 3rem;
+					}
+				}
+
+				.tortilla-wrapper-footer {
+					.about-us-footer,
+					.our-compan-footer,
+					.documents-footer {
+						.footer-header {
+							font-weight: bold;
+							font-size: 3rem;
+						}
+
+						.footer-description {
+							font-size: 2rem;
+						}
+					}
+
+					.about-us-footer,
+					.our-compan-footer,
+					.documents-footer {
+						margin: 0 50px;
+					}
+				}
+			}
+	}
+
+	// CONTACT \/
+	// CONTACT \/
+	// CONTACT \/
+	// CONTACT \/
+
+	section.contact-form {
+		.contact-wrapper {
+			min-width: 500px;
+		}
+	}
+	section.google-maps {
+		margin-bottom: 50px;
+
+		.map {
+			width: 800px;
+			height: 650px;
+		}
+	}
+}
+
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+// CONTACT :: //
+
+section.info {
+	margin-top: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	.street,
+	.phone-number {
+		margin-top: 20px;
+		font-size: 2rem;
+	}
+}
+
+section.contact-form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px 0;
+
+	.contact-wrapper {
+		// ten max width musi tak byc, on nie jest od wrappera
+		max-width: 320px;
+		background-color: #fff;
+		box-shadow: 0 0 3px #000;
+	}
+
+	form {
+		padding: 40px;
+		font-size: 20px;
+
+		h2 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.form-box {
+			margin-bottom: 15px;
+
+			label {
+				display: inline-block;
+				margin-bottom: 5px;
+			}
+
+			input {
+				width: 100%;
+				padding: 10px;
+				font-size: 16px;
+				border: 1px solid black;
+				border-radius: 5px;
+			}
+		}
+
+		.control-buttons {
+			display: flex;
+			justify-content: flex-start;
+
+			.send,
+			.clear {
+				display: block;
+				padding: 10px 0;
+				margin-left: 10px;
+				width: 100px;
+				font-size: 1.5rem;
+				background-color: rgb(130, 177, 99);
+				color: #fff;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+				transition: background-color 0.3s;
+			}
+
+			.send:hover,
+			.clear:hover,
+			.close:hover {
+				background-color: rgb(140, 250, 67);
+			}
+		}
+
+		.message {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			min-height: 40px;
+			font-size: 1.5rem;
+			border: 1px solid black;
+		}
+	}
+}
+
+section.google-maps {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.find-us {
+		font-size: 2rem;
+		margin-bottom: 30px;
+	}
+
+	.map {
+		width: 300px;
+		height: 250px;
+	}
+}
+
+@media (min-width: 992px) {
+	section.google-maps {
+		.map {
+			width: 700px;
+			height: 550px;
+		}
+	}
+}
